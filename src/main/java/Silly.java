@@ -165,11 +165,15 @@ public class Silly implements Comparable<Silly>{
          */
         if (!(o instanceof Silly)){
             return false;
-        } else {
-            return this.name.equals(other.name);
         }
 
         Silly other = (Silly) o; // To access .name of o, we need to cast it.
+
+        if (this.name.equals(other.name)) {
+            return true;
+        } else {
+            return false;
+        }
 
         // Hint: to compare strings, we need to use .equals()
         //       e.g. s1.equals(s2)
